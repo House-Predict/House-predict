@@ -1,0 +1,76 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Show Property
+{% endblock %}
+
+{% block content %}
+
+<table class="table table-striped table-hover" style="margin-top:50px">
+<tr>
+    <th>Posted By</th>
+    <td>{{p.posted_by}}</td>
+</tr>
+<tr>
+    <th>Area (in Sqft)</th>
+    <td>{{p.area}}</td>
+</tr>
+<tr>
+    <th>Price (in Lakhs)</th>
+    <td>{{p.price}}</td>
+</tr>
+<tr>
+    <th>Number of Rooms</th>
+    <td>{{p.rooms}}</td>
+</tr>
+<tr>
+    <th>Layout Type</th>
+    <td>{{p.room_type}}</td>
+</tr>
+<tr>
+    <th>Location</th>
+    <td>{{p.location}}</td>
+</tr>
+<tr>
+    <th>Longitude</th>
+    <td>{{p.loc_long}}</td>
+</tr>
+<tr>
+    <th>Latitude</th>
+    <td>{{p.loc_lat}}</td>
+</tr>
+<tr>
+    <th>Under Construction</th>
+    {% if p.under_construction is True %}
+    <td>Yes</td>
+    {% else %}
+    <td>No</td>
+    {% endif %}
+</tr>
+<tr>
+    <th>RERA Approved</th>
+    {% if p.rera is True %}
+    <td>Yes</td>
+    {% else %}
+    <td>No</td>
+    {% endif %}
+</tr>
+<tr>
+    <th>Resale</th>
+    {% if p.resale is True %}
+    <td>Yes</td>
+    {% else %}
+    <td>No</td>
+    {% endif %}
+</tr>
+<tr>
+    <th>Ready To Move</th>
+    {% if p.ready_to_move is True %}
+    <td>Yes</td>
+    {% else %}
+    <td>No</td>
+    {% endif %}
+</tr>
+</table>
+
+{% endblock %}

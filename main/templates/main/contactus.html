@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Contact Us
+{% endblock %}
+
+{% block content %}
+<p class="mbr-text align-center pb-3 mbr-fonts-style display-5">
+    <br><br>
+    <p class="mbr-text align-center pb-3 mbr-fonts-style display-5">Have something to say to the devs? </p>
+    <p class="mbr-text align-center pb-3 mbr-fonts-style display-5">Give your feedback below and we will get in touch as soon as possible</p>
+</p>
+<form method="POST" style="margin:50px 300px 0px 300px;">
+{% csrf_token %}
+    <div class="input-group mb-3">
+    <span class="input-group-text" id="name">Name</span>
+    {{form.name}}
+    </div>
+    <div class="input-group mb-3">
+    <span class="input-group-text" id="email">Email</span>
+        {{form.email}}
+    </div>
+    <div class="input-group mb-3">
+    <span class="input-group-text" id="Subject">Subject</span>
+        {{form.subject}}
+    </div>
+    <div class="input-group">
+    <span class="input-group-text">Feedback</span>
+        {{form.message}}
+    </div>
+    <div style="text-align:center; margin-top:30px;">
+        <button type="submit" class="btn btn-outline-primary">Send</button>
+    </div>
+</form>
+{% endblock %}

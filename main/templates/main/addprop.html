@@ -1,0 +1,63 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Add Property
+{% endblock %}
+
+{% block content %}
+<form method="POST" style="margin-top: 40px;">
+    {% csrf_token %}
+        <div class="form-floating mb-3" style="display: block;margin: 0 auto;width:400px;">
+        {{form.posted_by}}
+        <label for="pby">Posted By</label>
+        </div>
+        <div class="form-floating mb-3" style="display: block;margin: 0 auto;width:400px;">
+        {{form.rooms}}
+        <label for="rm">Number of Rooms</label>
+        </div>
+        <div class="form-floating mb-3" style="display: block;margin: 0 auto;width:400px;">
+        {{form.room_type}}
+        <label for="rmtype">Type of Room Layout</label>
+        </div>
+        <div class="form-floating mb-3" style="display: block;margin: 0 auto;width:400px;">
+        {{form.area}}
+        <label for="area">Area in Sqft</label>
+        </div>
+        <div class="form-floating mb-3" style="display: block;margin: 0 auto;width:400px;">
+        {{form.price}}
+        <label for="price">Price in Lakhs</label>
+        </div>
+        <div class="form-floating mb-3" style="display: block;margin: 0 auto;width:400px;">
+        {{form.location}}
+        <label for="pass1">Location</label>
+        </div>
+        <div class="form-floating mb-3" style="display: block;margin: 0 auto;width:400px;">
+        {{form.loc_long}}
+        <label for="loclong">Longitude</label>
+        </div>
+        <div class="form-floating mb-3" style="display: block;margin: 0 auto;width:400px;">
+        {{form.loc_lat}}
+        <label for="loclat">Latitude</label>
+        </div>
+        <div class="form-check mb-3" style="display: block;margin: 0 auto;width:440px;">
+        {{form.resale}}
+        <label class="form-check-label" for="resale">Resale</label>
+        </div>
+        <div class="form-check mb-3" style="display: block;margin: 0 auto;width:440px;">
+        {{form.under_construction}}
+        <label class="form-check-label" for="uc">Under Construction</label>
+        </div>
+        <div class="form-check mb-3" style="display: block;margin: 0 auto;width:440px;">
+        {{form.rera}}
+        <label class="form-check-label" for="rera">Rera Approved</label>
+        </div>
+        <div class="form-check mb-3" style="display: block;margin: 0 auto;width:440px;">
+        {{form.ready_to_move}}
+        <label class="form-check-label" for="rtm">Ready to Move</label>
+        </div>
+        <div style="text-align:center;">
+        <button type="submit" class="btn btn-outline-primary">Add</button>
+        </div>
+    
+</form>
+{% endblock %}

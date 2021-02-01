@@ -1,0 +1,33 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+
+<div  style="margin-top:40px;text-align:center;">
+<img src="{% static 'images/hp_black_logo.png'%}" alt="register logo" width=400px>
+</div>
+
+<form method="POST" style="margin-top: 40px;">
+    {% csrf_token %}
+    <div style="display: flex;flex-direction: row; justify-content:center;">
+        <div class="form-floating mb-3" style="display: block;margin: 0px 20px 0px 20px;width:400px;">
+        {{form.username}}
+        <label for="usname">Username</label>
+        </div>
+    </div>
+    <div style="display: flex;flex-direction: row; justify-content:center;">
+        <div class="form-floating mb-3" style="display: block;margin: 0px 20px 0px 20px;width:400px;">
+        {{form.password}}
+        <label for="pass">Password</label>
+        </div>
+    </div>
+    <div class="form-floating mb-3"style="text-align:center; margin-top:20px;">Don't have an account? Sign Up <a href="/register">Here </a></div> 
+    <div style="text-align:center; margin-top:20px;">
+        <button type="submit" class="btn btn-outline-primary">Login</button>
+    </div>
+</form>
+{% endblock  %}

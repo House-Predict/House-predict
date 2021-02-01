@@ -1,0 +1,134 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+House Predict
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Ubuntu&display=swap" rel="stylesheet">
+ 
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/c1.jfif' %}" alt="Carousel1">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>For All Of Your Housing Needs.</h1>
+            <br>
+            <p><a class="btn btn-lg btn-primary" href="/register" role="button">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/Logo.jpg' %}" alt="Carousel2">  
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Know More About Us.</h1>
+            <br>
+            <p><a class="btn btn-lg btn-primary" href="/aboutus" role="button">Continue Reading</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/c3.jpg' %}" alt="Carousel3">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Have an House Idea In Mind?</h1>
+            <h3>Predict cost with our Machine Learning Algorithm.</h3>
+            <p><a class="btn btn-lg btn-primary" href="/predict" role="button">Check out this feature</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+
+
+
+    
+    <div class=" row harsh "  style="background-color:#384B56; padding:7% 15%; color:#fff">
+      <div class="feature-box col-lg-4 align-center">
+        <i class=" icon fas fa-check-circle fa-4x"></i>
+        <h3 >Easy to use.</h3>
+        
+      </div>
+      <div class=" feature-box col-lg-4 mbr-text align-center">
+        <i class="icon fas fa-bullseye fa-4x"></i>
+      <h3>Guaranteed to Work</h3>
+    
+      </div>
+    <div class="feature-box col-lg-4 mbr-text align-center">
+      <i class="icon fas fa-heart fa-4x"></i>
+      <h3>Accurate Prediction</h3>
+    
+    </div>
+  </div>
+
+ <hr>
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div>
+
+    <!-- Three columns of text below the carousel -->
+    <div >
+      <div class="skill-row">
+        <img class="code-pic" src="{% static 'images/house-fill.png' %}" alt="Circle1" width=140 height=140>
+        
+        <h2>What Lies Ahead</h2>
+        <br>
+        <p>At House Predict we are always in the pursuit of perfection. We always try to make our application more. . .</p>
+        <br>
+        <p><a class="btn btn-secondary" href="/future" role="button">Future Aspects &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <hr>
+      <div class="skill-row">
+        <img class="chilli-pic" src="{% static 'images/machine.jpg' %}" alt="Circle2" width=140 height=140>
+        <h2>About ML Prediction</h2>
+        <br>
+        <p> This project aims at solving this very problem so as to help the society to pre-plan and take notice of . . .</p>
+        <br>
+        <p><a class="btn btn-secondary" href="/mlalgo" role="button">Know More &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <hr>
+      <div class="skill-row" >
+        <img class="code-pic" src="{% static 'images/house-fill.png' %}" alt="Circle3" width=140 height=140>
+        <h2>About House Predict</h2>
+        <br>
+        <p>The house price prediction model will work on predicting the average budget of construction . . .</p>
+        <br>
+        <p><a class="btn btn-secondary" href="/aboutus" role="button">About Us &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+      <hr>
+
+  <!-- FOOTER -->
+  
+    <div class="bottom align-center" style="margin:100px 40px; padding:50px 50px;">
+      
+      <a class="footer-link " href="#">LinkedIn</a>
+      <a class="footer-link " href="#">Facebook</a>
+      <a class="footer-link " href="#">Instagram</a>
+      <br>
+      <br>
+    
+    <p>&copy; House Prdeict &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </div>
+  
+
+{% endblock %}
